@@ -1,4 +1,4 @@
-# printf-like function [_printf] - Simple implementation in C
+# printf-like function [_printf] - Simple C implementation
 
 ----
 
@@ -12,8 +12,10 @@ possible, so we are going to implement the simpliest conversion specifiers first
 1. **Clone this Repo to your locale machine**
 
 2. **Code Compilation**
-- Use the command below to compilation.
-```gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c```
+- Use the command below to compilation
+```
+$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c
+```
 
 3. **You can create your own string format!**
 - To experiment our `_printf` function, create your own format string.
@@ -21,7 +23,9 @@ possible, so we are going to implement the simpliest conversion specifiers first
 
 4. **Program Execution**
 - Execute the program by running the command below:
-```./a.out``` [NOTE: This is the executable file in linux machines.]
+```
+$ ./a.out
+``` [NOTE: This is the executable file in linux machines.]
 
 ## Project Structure
 - `main.h`: Contains prototypes of all the functions used to build the `_printf` function.
