@@ -25,7 +25,8 @@ $ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c
 - Execute the program by running the command below:
 ```
 $ ./a.out
-``` [NOTE: This is the executable file in linux machines.]
+``` 
+- [NOTE: This is the executable file in linux machines.]
 
 ## Project Structure
 - `main.h`: Contains prototypes of all the functions used to build the `_printf` function.
