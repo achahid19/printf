@@ -12,7 +12,7 @@ possible, so we are going to implement the simpliest conversion specifiers first
 1. **Clone this Repo to your locale machine**
 
 2. **Code Compilation**
-- Use the command below to compilation
+- Use the command below for compilation
 ```
 $ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c
 ```
