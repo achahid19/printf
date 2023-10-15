@@ -14,10 +14,11 @@ int (*get_ft_spec(char c))(va_list args)
 		{'%', ft_putchar},
 		{'i', ft_putnbr},
 		{'d', ft_putnbr},
+		{'b', ft_print_binary}
 	};
 	int count;
 
-	for (count = 0; count < 5; count++)
+	for (count = 0; count < 6; count++)
 	{
 		if (st_list[count].c == c)
 		{
