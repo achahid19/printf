@@ -14,10 +14,12 @@ int ft_putnbr(va_list args);
 int (*get_ft_spec(char c))(va_list args);
 int ft_print_binary(va_list args);
 int ft_putnbrs(int n);
+int ft_print_percent(va_list);
+int ft_putch(char c);
 
 /* Struct to get the corresponding format specifier and prints it */
 /**
- * format specifier - structure that gets the right format specifier "c"
+ * struct format_specifier - structure that gets the right format specifier "c"
  * and points to the function that prints c
  * @c: character that holds the format specifier
  * @func: pointer to the function that prints depending on c.
