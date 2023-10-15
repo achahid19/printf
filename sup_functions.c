@@ -59,3 +59,14 @@ int ft_putnbrs(int n)
 
 	return (numChars);
 }
+
+/**
+ * ft_putch - prints character
+ * @c: char to print
+ * Return: 1.
+*/
+int ft_putch(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

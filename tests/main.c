@@ -26,8 +26,8 @@ int main(void)
     _printf("this is _printf: %d, %i\n", len, len);
 
     /* test lenght */
-    len = printf("anas%s, %d, %c, %i, %c\n", "ksabi", 922, 'a', 65, 65);
-    len1 = _printf("anas%s, %d, %c, %i, %c\n", "ksabi", 922, 'a', 65, 65);
+    len = printf("anas%s, %d, %c, %i, %c, %%\n", "ksabi", 922, '%', 65, 65);
+    len1 = _printf("anas%s, %d, %c, %i, %c, %%\n", "ksabi", 922, '%', 65, 65);
     printf("%d, %d\n", len, len1);
     _printf("%d, %d\n", len, len1);
 

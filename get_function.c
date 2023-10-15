@@ -100,3 +100,14 @@ int ft_print_binary(va_list args)
 	ft_putnbrs(bin);
 	return (numChar);
 }
+
+/**
+ * ft_print_percent - function that prints '%'
+ * @args: list of arguments
+ * Return: 1.
+*/
+int ft_print_percent(va_list args)
+{
+	(void)args;
+	return (ft_putch('%'));
+}

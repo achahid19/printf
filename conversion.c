@@ -11,7 +11,7 @@ int (*get_ft_spec(char c))(va_list args)
 	ft_spec st_list[] = {
 		{'c', ft_putchar},
 		{'s', ft_putstr},
-		{'%', ft_putchar},
+		{'%', ft_print_percent},
 		{'i', ft_putnbr},
 		{'d', ft_putnbr},
 		{'b', ft_print_binary}
