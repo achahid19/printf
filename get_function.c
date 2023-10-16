@@ -72,6 +72,11 @@ int ft_putstr(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
+	if (str == NULL)
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}	
 	for (count = 0; str[count]; count++)
 		write(1, &(str[count]), 1);
 	return (count);

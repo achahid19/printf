@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char *str = "anas";
+    char *str = NULL;
     char c = 'q';
     char a = 65;
     char mod = '%';
