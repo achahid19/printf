@@ -1,21 +1,6 @@
 #include "main.h"
 
 /**
- * ft_is_printable - function that checks if c is printable based on ASCII
- * @c: character to check
- * Return: 1 if c is printable, 0 if not.
-*/
-int ft_is_printable(char c)
-{
-	if (c > 32 && c < 127)
-	{
-		write(1, &c, 1);
-		return (1);
-	}
-	return (0);
-}
-
-/**
  * ft_putchar - prints a character on stdout
  * @args: list of arguments passed to the function
  * Return: number of printed char.
@@ -25,7 +10,8 @@ int ft_putchar(va_list args)
 	char c;
 
 	c = va_arg(args, int);
-	return (ft_is_printable(c));
+	write(1, &c, 1);
+	return (1);
 }
 
 /**

@@ -35,5 +35,10 @@ int main(void)
     len1 = _printf("%b\n", num) - 1;
     _printf("len of binary: %d\n", len1);
 
+    /* test len of NULL */
+    // len = printf("%s%c", NULL, '\n');
+    len1 = _printf("%s%c", NULL, '\n');
+    // printf("%d", len);
+    _printf("%d", len1);
     return (0);
 }
