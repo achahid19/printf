@@ -28,12 +28,6 @@ int _printf(const char *format, ...)
 		{
 			count++;
 			len -= 2;
-			if (format[count + 1] == '%' || format[count + 2] == '%')
-			{
-				len += ft_putch('%');
-				count++;
-				continue;
-			}
 			if (ft_is_specifier(format[count]))
 			{
 				func = get_ft_spec(format[count]);
