@@ -3,13 +3,13 @@
 /**
  * ft_is_printable - function that checks if c is printable based on ASCII
  * @c: character to check
- * Return: 1 if c is printable, 0 if not. 
+ * Return: 1 if c is printable, 0 if not.
 */
 int ft_is_printable(char c)
 {
 	if (c > 32 && c < 127)
 	{
-		write (1, &c, 1);
+		write(1, &c, 1);
 		return (1);
 	}
 	return (0);
@@ -88,9 +88,9 @@ int ft_putstr(va_list args)
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
-		write (1, "(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
-	}	
+	}
 	for (count = 0; str[count]; count++)
 		write(1, &(str[count]), 1);
 	return (count);
