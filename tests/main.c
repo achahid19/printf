@@ -36,9 +36,16 @@ int main(void)
     _printf("len of binary: %d\n", len1);
 
     /* test len of NULL */
-    // len = printf("%s%c", NULL, '\n');
+    len = printf("%s%c", NULL, '\n');
     len1 = _printf("%s%c", NULL, '\n');
-    // printf("%d", len);
-    _printf("%d", len1);
+    printf("%d", len);
+    _printf("%d\n", len1);
+
+    /* test if str == ""*/
+    len = printf("%s\n%%%%%\n", "\0\0");
+    len1 =_printf("%s\n%%%%%\n", "\0\0");
+
+    printf("%d\n", len);
+    _printf("%d\n", len1);
     return (0);
 }
