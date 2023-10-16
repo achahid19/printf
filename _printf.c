@@ -22,7 +22,9 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[count])
 	{
-		if (format[count] == '%')
+		if (format[count] != '%')
+			write(1, &format[count], 1);
+		else if (format[count] == '%')
 		{
 			count++;
 			len -= 2;
@@ -32,8 +34,6 @@ int _printf(const char *format, ...)
 				len += (*func)(args);
 			}
 		}
-		if (format[count] != '%')
-			write(1, &format[count], 1);
 		count++;
 	}
 	va_end(args);
