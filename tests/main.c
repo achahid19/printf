@@ -42,8 +42,8 @@ int main(void)
     _printf("%d\n", len1);
 
     /* test if str == ""*/
-    len = printf("%s\n%%%%%\n", "\0\0");
-    len1 =_printf("%s\n%%%%%\n", "\0\0");
+    len = printf("%s\n%%%%\n", "\0\0");
+    len1 =_printf("%s\n%%%%\n", "\0\0");
 
     printf("%d\n", len);
     _printf("%d\n", len1);

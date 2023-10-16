@@ -22,26 +22,18 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[count])
 	{
-		if (format[count] != '%')
-			write(1, &format[count], 1);
-		else if (format[count] == '%')
+		if (format[count] == '%')
 		{
 			count++;
 			len -= 2;
-			if (format[count + 1] == '%' && format[count + 2] != '%')
-			{
-				if (ft_is_specifier2(format[count]))
-					goto here;
-				ft_putch('%');
-				count++;
-			}
-			here:
 			if (ft_is_specifier(format[count]))
 			{
 				func = get_ft_spec(format[count]);
 				len += (*func)(args);
 			}
 		}
+		if (format[count] != '%')
+			write(1, &format[count], 1);
 		count++;
 	}
 	va_end(args);

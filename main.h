@@ -17,7 +17,6 @@ int ft_putnbrs(int n);
 int ft_print_percent(va_list);
 int ft_putch(char c);
 int ft_is_specifier(char c);
-int ft_is_specifier2(char c);
 
 /* Struct to get the corresponding format specifier and prints it */
 /**
