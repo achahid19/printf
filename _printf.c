@@ -29,8 +29,13 @@ int _printf(const char *format, ...)
 		if (format[count] == '%')
 		{
 			count++;
-			func = get_ft_spec(format[count]);
 			len -= 2;
+			if (format[count] == '%')
+			{
+				len += ft_putch('%');
+				continue;
+			}
+			func = get_ft_spec(format[count]);
 			len += (*func)(args);
 		}
 		else
