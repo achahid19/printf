@@ -20,10 +20,8 @@ int (*get_ft_spec(char c))(va_list args)
 
 	for (count = 0; count < 6; count++)
 	{
-		if (st_list[count].c == c)
-		{
+		if (st_list[count].c == c && count < 6)
 			return (st_list[count].func);
-		}
 	}
 	return (NULL);
 }

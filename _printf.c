@@ -13,33 +13,34 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	unsigned int count;
+	unsigned int count = 0;
 	int (*func)(va_list);
 	int len = 0;
-	char error[] = "format error, length is zero.\n";
 
-	if (format == NULL || format[0] == '\0')
-	{
-		write(STDERR_FILENO, error, ft_strlen(error));
-		return (0);
-	}
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
-	for (count = 0; format[count]; count++)
+	while (format[count])
 	{
-		if (format[count] == '%')
+		if (format[count] != '%')
+			write(1, &format[count], 1);
+		else if (format[count] == '%')
 		{
 			count++;
 			len -= 2;
-			if (format[count] == '%')
+			if (format[count + 1] == '%' || format[count + 2] == '%')
 			{
 				len += ft_putch('%');
+				count++;
 				continue;
 			}
-			func = get_ft_spec(format[count]);
-			len += (*func)(args);
+			if (ft_is_specifier(format[count]))
+			{
+				func = get_ft_spec(format[count]);
+				len += (*func)(args);
+			}
 		}
-		else
-			write(1, &format[count], 1);
+		count++;
 	}
 	va_end(args);
 	return (count + len);
