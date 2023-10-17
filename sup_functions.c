@@ -65,7 +65,7 @@ int ft_putnbrs(int n)
  * @c: char to print
  * Return: 1.
 */
-int ft_putch(char c)
+int _putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);

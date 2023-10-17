@@ -90,5 +90,5 @@ int ft_putstr(va_list args)
 int ft_print_percent(va_list args)
 {
 	(void)args;
-	return (ft_putch('%'));
+	return (_putchar('%'));
 }

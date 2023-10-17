@@ -15,7 +15,7 @@ int (*get_ft_spec(char c))(va_list args);
 int ft_print_binary(va_list args);
 int ft_putnbrs(int n);
 int ft_print_percent(va_list);
-int ft_putch(char c);
+int _putchar(char c);
 int ft_is_specifier(char c);
 
 /* Struct to get the corresponding format specifier and prints it */
