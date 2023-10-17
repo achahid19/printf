@@ -73,10 +73,7 @@ int ft_putstr(va_list args)
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
+		str = "(null)";
 	for (count = 0; str[count]; count++)
 		write(1, &(str[count]), 1);
 	return (count);

@@ -61,7 +61,7 @@ int ft_putnbrs(int n)
 }
 
 /**
- * ft_putch - prints character
+ * _putchar - prints character
  * @c: char to print
  * Return: 1.
 */
