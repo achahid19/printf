@@ -8,7 +8,7 @@ int main(void)
     char a = 65;
     char mod = '%';
     int len = -1013224530, len1;
-    unsigned int num = 98;
+    unsigned int num = -98;
 
     printf("this is printf: %s, %c, %c, %c\n", str, c, a, mod);
     _printf("this is _printf: %s, %c, %c, %c\n", str, c, a, mod);
@@ -26,14 +26,10 @@ int main(void)
     _printf("this is _printf: %d, %i\n", len, len);
 
     /* test lenght */
-    len = printf("%s, %d, %c, %i, %c, %%c, FUCK\n", NULL, 922, '%', 65, 65, 't');
-    len1 = _printf("%s, %d, %c, %i, %c, %%c, FUCK\n", NULL, 922, '%', 65, 65, 't');
+    len = printf("%s, %d, %c, %i, %c, %%c, ALX_IS_GREAT\n", NULL, 922, '%', 65, 65, 't');
+    len1 = _printf("%s, %d, %c, %i, %c, %%c, ALX_IS_GREAT\n", NULL, 922, '%', 65, 65, 't');
     printf("%d, %d\n", len, len1);
     _printf("%d, %d\n", len, len1);
-
-    /* test to print binary */
-    len1 = _printf("%b\n", num) - 1;
-    _printf("len of binary: %d\n", len1);
 
     /* test len of NULL */
     len = printf("%s%c", NULL, '\n');
@@ -53,6 +49,13 @@ int main(void)
 
     printf("%d\n", len);
     _printf("%d\n", len1);
+
+    _printf("----------------------------------------------------\n");
+    _printf("%Advanced tasks tests\n");
+    /* test to print binary */
+    printf("binary format in printf: %b\n", num);
+    len1 = _printf("%b\n", num) - 1;
+    _printf("len of binary: %d\n", len1);
 
     return (0);
 }

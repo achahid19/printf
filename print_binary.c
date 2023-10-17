@@ -8,18 +8,27 @@
 int ft_print_binary(va_list args)
 {
 	unsigned int num;
-	int bin = 0, rem = 0, place = 1;
-	int numChar = 0;
+	char binary[33]; /* 32 bits + null terminator */
+	int count, nChar = 0;
 
 	num = va_arg(args, unsigned int);
-	while (num)
+	if (num == 0)
 	{
-		rem = num % 2;
-		num = num / 2;
-		bin = bin + (rem * place);
-		place = place * 10;
-		numChar++;
+		write(1, "0", 1);
+		return (1);
 	}
-	ft_putnbrs(bin);
-	return (numChar);
+	for (count = 31; count >= 0; count--)
+	{
+		if ((num >> count) & count)
+		{
+			binary[nChar++] = '1';
+		}
+		else if (nChar > 0)
+		{
+			binary[nChar++] = '0';
+		}
+	}
+	binary[nChar] = '\0';
+	write(1, binary, nChar);
+	return (nChar);
 }
