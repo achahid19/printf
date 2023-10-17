@@ -44,4 +44,4 @@ The project is divided into two parts, mandatory tasks / advanced tasks:
 
 2. **Advanced tasks:** <br>
 **Task2: handling conversion of unsigned int to binary format**
-- Handle the conversion specifier %b [IN PROGRESS].
+- Handle the conversion specifier %b [DONE].
