@@ -43,7 +43,7 @@ int main(void)
 
     /* test if str == ""*/
     len = printf("%\n", "\0\0");
-    len1 =_printf("%%\n", "\0\0");
+    len1 =_printf("%\n", "\0\0");
 
     printf("%d\n", len);
     _printf("%d\n", len1);

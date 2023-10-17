@@ -20,12 +20,19 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
+here:
 	while (format[count])
 	{
 		if (format[count] != '%')
 			write(1, &format[count], 1);
 		else if (format[count] == '%')
 		{
+			if (ft_is_specifier(format[count + 1]) == 0)
+			{
+				write(1, &format[count], 1);
+				count++;
+				goto here;
+			}
 			count++;
 			len -= 2;
 			func = get_ft_spec(format[count]);
