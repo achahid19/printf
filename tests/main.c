@@ -14,11 +14,11 @@ int main(void)
     _printf("this is _printf: %s, %c, %c, %c\n", str, c, a, mod);
 
     /* handle error if null */
-    // printf(NULL);
-    _printf(NULL);
-
+    len =  printf("%%%c%%%s\n", 43, "\0''");
+    len1 = _printf("%%%c%%%s\n", 43, "\0''");
+    printf("%d, %d\n", len, len1);
     /* handle error if format[0] == '\0' */
-    // printf("");
+    printf("");
     _printf("");
 
     /* test %i and %d */
@@ -26,8 +26,8 @@ int main(void)
     _printf("this is _printf: %d, %i\n", len, len);
 
     /* test lenght */
-    len = printf("%s, %d, %c, %i, %c, %%c, flijsd\n", NULL, 922, '%', 65, 65, 't');
-    len1 = _printf("%s, %d, %c, %i, %c, %%c, flijsd\n", NULL, 922, '%', 65, 65, 't');
+    len = printf("%s, %d, %c, %i, %c, %%c, FUCK\n", NULL, 922, '%', 65, 65, 't');
+    len1 = _printf("%s, %d, %c, %i, %c, %%c, FUCK\n", NULL, 922, '%', 65, 65, 't');
     printf("%d, %d\n", len, len1);
     _printf("%d, %d\n", len, len1);
 
@@ -38,12 +38,12 @@ int main(void)
     /* test len of NULL */
     len = printf("%s%c", NULL, '\n');
     len1 = _printf("%s%c", NULL, '\n');
-    printf("%d", len);
+    printf("%d\n", len);
     _printf("%d\n", len1);
 
     /* test if str == ""*/
-    len = printf("%s\n%%%%\n", "\0\0");
-    len1 =_printf("%s\n%%%%\n", "\0\0");
+    len = printf("%\n", "\0\0");
+    len1 =_printf("%%\n", "\0\0");
 
     printf("%d\n", len);
     _printf("%d\n", len1);

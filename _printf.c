@@ -15,12 +15,12 @@ int _printf(const char *format, ...)
 	va_list args;
 	unsigned int count = 0;
 	int (*func)(va_list);
-	int len = 0, flag = 0;
+	int len = 0;
 
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
-	while (format && format[count])
+	while (format[count])
 	{
 		if (format[count] != '%')
 			write(1, &format[count], 1);
@@ -28,20 +28,10 @@ int _printf(const char *format, ...)
 		{
 			count++;
 			len -= 2;
-			flag = ft_is_specifier(format[count]);
-			if (flag)
-			{
-				func = get_ft_spec(format[count]);
-				len += (*func)(args);
-			}
+			func = get_ft_spec(format[count]);
+			len += (*func)(args);
 		}
 		count++;
-	}
-	if (flag == 0)
-	{
-		len += 2;
-		write(1, &format[count - 1], 1);
-		flag = 0;
 	}
 	va_end(args);
 	return (count + len);
