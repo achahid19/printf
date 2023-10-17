@@ -8,7 +8,8 @@ int main(void)
     char a = 65;
     char mod = '%';
     int len = -1013224530, len1;
-    unsigned int num = -98;
+    unsigned int num = 98;
+    int n = -98;
 
     printf("this is printf: %s, %c, %c, %c\n", str, c, a, mod);
     _printf("this is _printf: %s, %c, %c, %c\n", str, c, a, mod);
@@ -55,6 +56,8 @@ int main(void)
     /* test to print binary */
     printf("binary format in printf: %b\n", num);
     len1 = _printf("%b\n", num) - 1;
+    _printf("len of binary: %d\n", len1);
+    len1 = _printf("%b\n", n) - 1;
     _printf("len of binary: %d\n", len1);
 
     return (0);
