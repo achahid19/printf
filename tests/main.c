@@ -41,11 +41,18 @@ int main(void)
     printf("%d\n", len);
     _printf("%d\n", len1);
 
-    /* test if str == ""*/
+    /* test if str == "%\n"*/
     len = printf("%\n", "\0\0");
     len1 =_printf("%\n", "\0\0");
 
     printf("%d\n", len);
     _printf("%d\n", len1);
+    /* test if str ==  "%"*/
+    len = printf("%", "\0\0");
+    len1 =_printf("%", "\0\0");
+
+    printf("%d\n", len);
+    _printf("%d\n", len1);
+
     return (0);
 }

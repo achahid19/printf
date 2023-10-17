@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	int (*func)(va_list);
 	int len = 0;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && !format[1]))
 		return (-1);
 	va_start(args, format);
 here:
@@ -29,8 +29,7 @@ here:
 		{
 			if (ft_is_specifier(format[count + 1]) == 0)
 			{
-				write(1, &format[count], 1);
-				count++;
+				write(1, &format[count++], 1);
 				goto here;
 			}
 			count++;
