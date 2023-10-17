@@ -6,7 +6,7 @@
 
 This is a C project where we aim to create a simple version of the `printf` function. The main goal of this function
 is to handle various conversion specifiers and produce formatted output to `stdout`. In our project, we will start as simple as 
-possible, so we are going to implement the simpliest conversion specifiers first `%c, %s, %%`.
+possible, so we are going to implement the simpliest conversion specifiers first `%c, %s, %%, %d, and %i`.
 
 ## How to use
 1. **Clone this Repo to your locale machine**
@@ -18,7 +18,7 @@ $ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c
 ```
 
 3. **You can create your own string format!**
-- To experiment our `_printf` function, create your own format string.
+- To experiment our `_printf` function, create your own format string by modifiying main.c, you can find it in tests repo.
 - For instance, use these format specifiers `%c`, `%d`, `%i`, `s`, in order to print characters, integers and strings
 
 4. **Program Execution**
@@ -35,9 +35,13 @@ $ ./a.out
 
 ## Task Completion
 The project is divided into two parts, mandatory tasks / advanced tasks:
-1. **Mandatory tasks:**
-**Task 0: Implementation of basic conversion specifiers**
-- Handles `%s`, `%c` and `%%`
+1. **Mandatory tasks:** <br>
+**Task0: Implementation of basic conversion specifiers**
+- Handles `%s`, `%c` and `%%` [DONE].
 
-2. **Task1: Handling integer conversion specifier**
-- Extends the functionality in order to integrate `%i` and `%d`.
+**Task1: Handling integer conversion specifier**
+- Extends the functionality in order to integrate `%i` and `%d` [DONE].
+
+2. **Advanced tasks:** <br>
+**Task2: handling conversion of unsigned int to binary format**
+- Handle the conversion specifier %b [IN PROGRESS].
